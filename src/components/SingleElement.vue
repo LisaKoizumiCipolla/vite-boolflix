@@ -1,11 +1,27 @@
 <template>
     <div>
-        <h3>SingleElement</h3>
+        <div>
+            {{ title }}
+        </div>
+        <div>
+            {{ originalTitle }}
+        </div>
+        <div>
+            {{ originalLanguage }}
+        </div>
+        <div>
+            {{ voteAverage }}
+        </div>
     </div>
 </template>
 <script>
 export default {
-    
+    props : {
+        title : String,
+        originalTitle : String,
+        originalLanguage : String,
+        voteAverage : Number
+    }
 }
 </script>
 <style lang="scss" scoped>
