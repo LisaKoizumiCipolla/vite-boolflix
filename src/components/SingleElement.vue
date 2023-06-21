@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="wrapper">
         <div>
             {{ title }}
         </div>
@@ -25,5 +25,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-    
+    .wrapper{
+        padding-bottom: 20px;
+    }
 </style>
