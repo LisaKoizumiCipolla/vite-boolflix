@@ -33,8 +33,8 @@ export default {
             
         axios.get(this.apiUrl, {
             params: {
+                num : 20,
                 original_title : input,
-                num : 20
             }
         })
         .then( (response) => {
