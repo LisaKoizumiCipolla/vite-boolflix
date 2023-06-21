@@ -3,7 +3,8 @@
         <h1>
             AppMain
         </h1>
-        <SearchElement @search="searchedSomethingToWatch"/>
+        <SearchElement @search="searchedSomethingToWatch"
+        :searchedItem = movieList />
         <WatchList />
     </div>
 </template>
