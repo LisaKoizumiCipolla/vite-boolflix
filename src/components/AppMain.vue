@@ -23,7 +23,7 @@ export default {
 
     data(){
         return {
-            apiUrl : "https://api.themoviedb.org/3/search/movie?api_key=db24a133b233244270659525c833dc4b&query" ,
+            apiUrl : "https://api.themoviedb.org/3/search/movie?api_key=db24a133b233244270659525c833dc4b" ,
             movieList : []
         }
     },
@@ -34,7 +34,7 @@ export default {
         axios.get(this.apiUrl, {
             params: {
                 num : 20,
-                original_title : input,
+                query : input,
             }
         })
         .then( (response) => {
