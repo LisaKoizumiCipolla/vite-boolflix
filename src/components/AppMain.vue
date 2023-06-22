@@ -26,7 +26,6 @@ export default {
             seriesApiUrl : "https://api.themoviedb.org/3/search/tv",
             moviesList : [],
             seriesList : [],
-            movieList : [].concat(moviesList, seriesList),
             languages : ["de", "fr", "en", "it", "ja", "es", "ko", "zh", "id", "ru", "pl"]
         }
     },
@@ -43,8 +42,6 @@ export default {
         .then( (response) => {
             this.moviesList = response.data.results;
             console.log(response.data.results);
-
-            
         })
         .catch(function (error) {
             console.log(error);
@@ -59,8 +56,6 @@ export default {
         .then( (response) => {
             this.seriesList = response.data.results;
             console.log(response.data.results);
-
-            
         })
         .catch(function (error) {
             console.log(error);
@@ -68,9 +63,11 @@ export default {
         }
     },
 
-    created(){
+    computed : {
+        movieList() {
+            return [...this.moviesList, ...this.seriesList] 
+        }
     }
-
 }
 
 </script>

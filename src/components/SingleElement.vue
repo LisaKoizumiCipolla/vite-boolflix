@@ -1,18 +1,19 @@
 <template>
     <div class="wrapper">
-        <div v-if="name = true ?  name  :  title ">
-            <div>
+        <div>
+            <div v-if="name">
                 {{ name }}
             </div>
-            <div>
+            <div v-else>
             {{ title }}</div>
         </div>
-        <div v-if="originalName = true ?  originalName  :  originalTitle ">
-            <div>
+        <div>
+            <div v-if="originalName">
                 {{ originalName }}
             </div>
-            <div>
-            {{ originalTitle }}</div>
+            <div v-else>
+            {{ originalTitle }}
+            </div>
         </div>
         <div>
             <div v-if="!languages.includes(originalLanguage)">{{ originalLanguage }}</div>
