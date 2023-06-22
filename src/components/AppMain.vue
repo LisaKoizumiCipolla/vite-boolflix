@@ -23,7 +23,8 @@ export default {
     data(){
         return {
             movieApiUrl : "https://api.themoviedb.org/3/search/movie" ,
-            movieList : []
+            movieList : [],
+            languages : ["de", "fr", "en", "it", "ja", "es", "ko", "zh", "id", "ru", "pl"]
         }
     },
     
@@ -39,6 +40,9 @@ export default {
         .then( (response) => {
             this.movieList = response.data.results;
             console.log(response.data.results);
+            console.log(response.data.results.original_language);
+
+            
         })
         .catch(function (error) {
             console.log(error);

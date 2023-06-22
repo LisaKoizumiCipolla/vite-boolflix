@@ -7,7 +7,9 @@
             {{ originalTitle }}
         </div>
         <div>
-            {{ originalLanguage }}
+            <div v-if="!languages.includes(originalLanguage)">{{ originalLanguage }}</div>
+            <img :src="`/public/flags/${originalLanguage}.png`" alt="">
+            
         </div>
         <div>
             {{ voteAverage }}
@@ -33,5 +35,9 @@ export default {
 <style lang="scss" scoped>
     .wrapper{
         padding-bottom: 20px;
+    }
+
+    img{
+        height: 30px;
     }
 </style>

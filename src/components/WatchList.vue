@@ -13,6 +13,7 @@
 import SingleElement from './SingleElement.vue'
 
 export default {
+    
     components: {
         SingleElement
     },
