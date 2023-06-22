@@ -1,10 +1,18 @@
 <template>
     <div class="wrapper">
-        <div>
-            {{ title }}
+        <div v-if="name = true ?  name  :  title ">
+            <div>
+                {{ name }}
+            </div>
+            <div>
+            {{ title }}</div>
         </div>
-        <div>
-            {{ originalTitle }}
+        <div v-if="originalName = true ?  originalName  :  originalTitle ">
+            <div>
+                {{ originalName }}
+            </div>
+            <div>
+            {{ originalTitle }}</div>
         </div>
         <div>
             <div v-if="!languages.includes(originalLanguage)">{{ originalLanguage }}</div>
@@ -20,7 +28,9 @@
 export default {
     props : {
         title : String,
+        name : String,
         originalTitle : String,
+        originalName : String,
         originalLanguage : String,
         voteAverage : Number
     },

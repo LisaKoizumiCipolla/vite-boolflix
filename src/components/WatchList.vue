@@ -3,7 +3,9 @@
         <h2>WatchList</h2>
         <SingleElement  v-for="movie in movieList"
         :title = "movie.title"
+        :name = "movie.name"
         :originalTitle = "movie.original_title"
+        :originalName = "movie.original_name"
         :originalLanguage = "movie.original_language"
         :voteAverage = "movie.vote_average"
         />
@@ -13,7 +15,7 @@
 import SingleElement from './SingleElement.vue'
 
 export default {
-    
+
     components: {
         SingleElement
     },

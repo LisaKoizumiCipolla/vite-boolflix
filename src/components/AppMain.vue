@@ -23,7 +23,10 @@ export default {
     data(){
         return {
             movieApiUrl : "https://api.themoviedb.org/3/search/movie" ,
-            movieList : [],
+            seriesApiUrl : "https://api.themoviedb.org/3/search/tv",
+            moviesList : [],
+            seriesList : [],
+            movieList : [].concat(moviesList, seriesList),
             languages : ["de", "fr", "en", "it", "ja", "es", "ko", "zh", "id", "ru", "pl"]
         }
     },
@@ -38,9 +41,24 @@ export default {
             }
         })
         .then( (response) => {
-            this.movieList = response.data.results;
+            this.moviesList = response.data.results;
             console.log(response.data.results);
-            console.log(response.data.results.original_language);
+
+            
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+
+        axios.get(this.seriesApiUrl, {
+            params: {
+                query : input,
+                api_key : "db24a133b233244270659525c833dc4b"
+            }
+        })
+        .then( (response) => {
+            this.seriesList = response.data.results;
+            console.log(response.data.results);
 
             
         })
