@@ -1,6 +1,6 @@
 <template>
     <div class="input-group mb-3 searchbar">
-        <span class="input-group-text" id="basic-addon1">Search</span>
+        <span @click="$emit('search', searchedItem)" class="input-group-text" id="basic-addon1">Search</span>
         <input type="text" class="form-control" placeholder="Let's binge!" aria-label="Username" aria-describedby="basic-addon1" 
         v-model="searchedItem" @keyup.enter="$emit('search', searchedItem)">
     </div>

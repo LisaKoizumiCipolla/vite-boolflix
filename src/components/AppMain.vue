@@ -22,7 +22,7 @@ export default {
 
     data(){
         return {
-            apiUrl : "https://api.themoviedb.org/3/search/movie?api_key=db24a133b233244270659525c833dc4b" ,
+            movieApiUrl : "https://api.themoviedb.org/3/search/movie" ,
             movieList : []
         }
     },
@@ -30,10 +30,10 @@ export default {
     methods:{
         searchedSomethingToWatch(input = ""){
             
-        axios.get(this.apiUrl, {
+        axios.get(this.movieApiUrl, {
             params: {
-                num : 20,
                 query : input,
+                api_key : "db24a133b233244270659525c833dc4b"
             }
         })
         .then( (response) => {
@@ -47,18 +47,6 @@ export default {
     },
 
     created(){
-        axios.get(this.apiUrl, {
-            params: {
-                num : 20
-            }
-        })
-        .then( (response) => {
-            this.movieList = response.data.results;
-            console.log(response.data.results);
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
     }
 
 }
