@@ -2,6 +2,7 @@
     <div>
         <h2>WatchList</h2>
         <SingleElement  v-for="movie in movieList"
+        :poster = "movie.poster_path"
         :title = "movie.title"
         :name = "movie.name"
         :originalTitle = "movie.original_title"

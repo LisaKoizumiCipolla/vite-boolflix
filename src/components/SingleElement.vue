@@ -1,5 +1,6 @@
 <template>
     <div class="wrapper">
+        <img class="poster" :src="`https://image.tmdb.org/t/p/w500/${poster}`" alt="">
         <div>
             <div v-if="name">
                 {{ name }}
@@ -17,7 +18,7 @@
         </div>
         <div>
             <div v-if="!languages.includes(originalLanguage)">{{ originalLanguage }}</div>
-            <img :src="`/public/flags/${originalLanguage}.png`" alt="">
+            <img class="flag" :src="`/public/flags/${originalLanguage}.png`" alt="">
             
         </div>
         <div>
@@ -28,6 +29,7 @@
 <script>
 export default {
     props : {
+        poster : String,
         title : String,
         name : String,
         originalTitle : String,
@@ -48,7 +50,10 @@ export default {
         padding-bottom: 20px;
     }
 
-    img{
+    .poster{
+        height: 350px;
+    }
+    .flag{
         height: 30px;
     }
 </style>
