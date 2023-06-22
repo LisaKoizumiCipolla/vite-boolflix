@@ -21,6 +21,12 @@ export default {
         originalTitle : String,
         originalLanguage : String,
         voteAverage : Number
+    },
+
+    data(){
+        return {
+            languages : ["de", "fr", "en", "it", "ja", "es", "ko", "zh", "id", "ru", "pl"]
+        }
     }
 }
 </script>
