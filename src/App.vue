@@ -1,22 +1,18 @@
 <script>
-import AppHeader from './components/AppHeader.vue'
-import AppMain from './components/AppMain.vue';
+import AppWrapper from '../src/components/AppWrapper.vue'
 import {store} from '../store'
 
 export default {
     name: 'App',
 
     components:{
-      AppHeader,
-      AppMain,
-      
+      AppWrapper
     }
 }
 </script>
 
 <template>
-  <AppHeader />
-  <AppMain />
+  <AppWrapper />
 </template>
 
 <style lang="scss">
