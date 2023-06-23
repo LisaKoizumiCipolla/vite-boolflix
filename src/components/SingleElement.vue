@@ -32,6 +32,9 @@
 
 <script>
 export default {
+
+    name: 'SingleElement',
+
     props : {
         poster : String,
         title : String,

@@ -15,6 +15,8 @@ import SearchElement from './SearchElement.vue'
 
 export default {
 
+    name: 'AppMain',
+
     components: {
         WatchList,
         SearchElement

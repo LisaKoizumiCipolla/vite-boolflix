@@ -17,6 +17,8 @@ import SingleElement from './SingleElement.vue'
 
 export default {
 
+    name: 'WatchList',
+
     components: {
         SingleElement
     },
