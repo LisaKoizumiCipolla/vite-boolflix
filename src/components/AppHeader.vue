@@ -3,7 +3,7 @@
         <h2>
             AppHeader
         </h2>
-        <SearchElement @search="searchedSomethingToWatch" />
+        <SearchElement @search="submit" />
     </div>
 </template>
 <script>
@@ -16,6 +16,16 @@ export default {
 components: {
     SearchElement
 },
+
+props : {
+
+},
+
+methods : {
+    submit( cosa ) {
+        this.$emit( 'search', cosa )
+    }
+}
 
     
 }

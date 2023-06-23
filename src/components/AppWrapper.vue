@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import AppHeader from './components/AppHeader.vue'
-import AppMain from './components/AppMain.vue';
+import AppHeader from './AppHeader.vue'
+import AppMain from './AppMain.vue';
 import axios from 'axios';
 
 export default {
