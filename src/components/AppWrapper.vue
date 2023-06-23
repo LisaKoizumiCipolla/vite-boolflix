@@ -1,7 +1,7 @@
 <template>
     <div>
         <AppHeader @search="searchedSomethingToWatch" />
-        <AppMain />
+        <AppMain WatchList :movieList = "movieList"/>
     </div>
 </template>
 
