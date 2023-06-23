@@ -6,26 +6,30 @@
                 {{ name }}
             </div>
             <div v-else>
-            {{ title }}</div>
+                {{ title }}
+            </div>
         </div>
         <div>
             <div v-if="originalName">
                 {{ originalName }}
             </div>
             <div v-else>
-            {{ originalTitle }}
+                {{ originalTitle }}
             </div>
         </div>
         <div>
             <div v-if="!languages.includes(originalLanguage)">{{ originalLanguage }}</div>
-            <img class="flag" :src="`/public/flags/${originalLanguage}.png`" alt="">
+            <img v-else class="flag" :src="`/public/flags/${originalLanguage}.png`" alt="">
             
         </div>
         <div>
-            {{ voteAverage }}
+            {{ Math.ceil(voteAverage / 2) }}
+            <i v-for="star in Math.ceil(voteAverage / 2)" class="fa-solid fa-star"></i>
+            <i v-for="star in ( 5 - (Math.ceil(voteAverage / 2)))" class="fa-regular fa-star"></i>
         </div>
     </div>
 </template>
+
 <script>
 export default {
     props : {
@@ -40,11 +44,16 @@ export default {
 
     data(){
         return {
-            languages : ["de", "fr", "en", "it", "ja", "es", "ko", "zh", "id", "ru", "pl"]
+            languages : ["de", "fr", "en", "it", "ja", "es", "ko", "zh", "id", "ru", "pl"],
         }
+    },
+
+    created() {
+        
     }
 }
 </script>
+
 <style lang="scss" scoped>
     .wrapper{
         padding-bottom: 20px;
