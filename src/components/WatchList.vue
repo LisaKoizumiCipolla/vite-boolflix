@@ -1,6 +1,5 @@
 <template>
-    <div>
-        <h2>WatchList</h2>
+    <div class="poster-wrapper">
         <SingleElement  v-for="movie in movieList"
         :poster = "movie.poster_path"
         :title = "movie.title"
@@ -9,9 +8,11 @@
         :originalName = "movie.original_name"
         :originalLanguage = "movie.original_language"
         :voteAverage = "movie.vote_average"
+        :overview = "movie.overview"
         />
     </div>
 </template>
+
 <script>
 import SingleElement from './SingleElement.vue'
 
@@ -27,6 +28,11 @@ export default {
     }
 }
 </script>
+
 <style lang="scss" scoped>
-    
+    .poster-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 </style>

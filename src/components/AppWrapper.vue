@@ -1,8 +1,10 @@
 <template>
-    <div>
-        <AppHeader @search="searchedSomethingToWatch" />
-        <AppMain WatchList :movieList = "movieList"/>
-    </div>
+        <div class="background">
+            <div class="wrapper">
+                <AppHeader @search="searchedSomethingToWatch" />
+                <AppMain WatchList :movieList = "movieList"/>
+            </div>
+        </div>
 </template>
 
 <script>
@@ -69,5 +71,7 @@ computed : {
 </script>
 
 <style lang="scss">
-    
+    .background{
+        background-color: #1B1B1B;
+    }
 </style>

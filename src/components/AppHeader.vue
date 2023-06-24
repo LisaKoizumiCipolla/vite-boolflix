@@ -1,8 +1,8 @@
 <template>
     <div>
-        <h2>
-            AppHeader
-        </h2>
+        <div>
+            <img src="../assets/icon_boolflix/boolflix_logo.png" alt="">
+        </div>
         <SearchElement @search="submit" />
     </div>
 </template>

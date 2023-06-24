@@ -1,8 +1,5 @@
 <template>
-    <div>
-        <h1>
-            AppMain
-        </h1>
+    <div class="main">
         <WatchList :movieList = "movieList" />
     </div>
 </template>
@@ -26,5 +23,7 @@ export default {
 </script>
 
 <style lang="scss">
-    
+    .main{
+        width: 100%;
+    }
 </style>
