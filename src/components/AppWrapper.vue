@@ -73,5 +73,6 @@ computed : {
 <style lang="scss">
     .background{
         background-color: #1B1B1B;
+        width: 100vw;
     }
 </style>
