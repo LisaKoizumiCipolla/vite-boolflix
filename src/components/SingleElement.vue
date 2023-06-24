@@ -74,8 +74,9 @@ export default {
     .info{
         position: absolute;
         opacity: 0;
-        overflow-y: auto;
+        overflow: auto;
         padding: 10px;
+        height: 100%;
     }
     .card{
         width: calc((100% / 6) - 10px);
