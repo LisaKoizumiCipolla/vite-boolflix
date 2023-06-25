@@ -7,20 +7,20 @@
             </div>
             <div class="info">
                 <div>
-                    <div v-if="name">
+                    <h1 v-if="name">
                         {{ name }}
-                    </div>
-                    <div v-else>
+                    </h1>
+                    <h1 v-else>
                         {{ title }}
-                    </div>
+                    </h1>
                 </div>
                 <div>
-                    <div v-if="originalName">
+                    <h2 v-if="originalName">
                         {{ originalName }}
-                    </div>
-                    <div v-else>
+                    </h2>
+                    <h2 v-else>
                         {{ originalTitle }}
-                    </div>
+                    </h2>
                     <div>
                         {{ overview }}
                     </div>
@@ -31,7 +31,6 @@
                     
                 </div>
                 <div>
-                    {{ Math.ceil(voteAverage / 2) }}
                     <i v-for="star in Math.ceil(voteAverage / 2)" class="fa-solid fa-star"></i>
                     <i v-for="star in ( 5 - (Math.ceil(voteAverage / 2)))" class="fa-regular fa-star"></i>
                 </div>
@@ -70,12 +69,19 @@ export default {
 
 <style lang="scss" scoped>
 
+    h1{
+        font-size: 1.5rem;
+    }
+
+    h2{
+        font-size: 1.3rem;
+    }
 
     .info{
         position: absolute;
         opacity: 0;
         overflow: auto;
-        padding: 10px;
+        padding: 20px;
         height: 100%;
     }
     .card{
@@ -115,5 +121,6 @@ export default {
 
     .flag{
         height: 30px;
+        margin: 15px 0 15px;
     }
 </style>

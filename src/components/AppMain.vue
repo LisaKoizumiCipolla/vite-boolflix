@@ -25,6 +25,9 @@ export default {
 <style lang="scss">
     .main{
         width: 100%;
+        height: calc( 100vh - 140px);
         background-color: #1B1B1B;
+        overflow-y: auto;
+        padding-bottom: 30px;
     }
 </style>

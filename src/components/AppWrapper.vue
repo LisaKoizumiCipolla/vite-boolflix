@@ -1,6 +1,6 @@
 <template>
-        <div class="background">
-            <div class="wrapper">
+        <div class="background" >
+            <div class="wrapper scroll">
                 <AppHeader @search="searchedSomethingToWatch" />
                 <AppMain WatchList :movieList = "movieList"/>
             </div>
@@ -73,6 +73,12 @@ computed : {
 <style lang="scss">
     .background{
         background-color: #1B1B1B;
-        width: 100vw;
+        overflow: hidden;
+        height: 100vh;
+    }
+
+    .scroll{
+        height: 100%;
+        overflow: hidden;
     }
 </style>

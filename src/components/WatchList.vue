@@ -1,15 +1,17 @@
 <template>
-    <div class="poster-wrapper">
-        <SingleElement  v-for="movie in movieList"
-        :poster = "movie.poster_path"
-        :title = "movie.title"
-        :name = "movie.name"
-        :originalTitle = "movie.original_title"
-        :originalName = "movie.original_name"
-        :originalLanguage = "movie.original_language"
-        :voteAverage = "movie.vote_average"
-        :overview = "movie.overview"
-        />
+    <div class="background-wrapper">
+        <div class="poster-wrapper">
+            <SingleElement  v-for="movie in movieList"
+            :poster = "movie.poster_path"
+            :title = "movie.title"
+            :name = "movie.name"
+            :originalTitle = "movie.original_title"
+            :originalName = "movie.original_name"
+            :originalLanguage = "movie.original_language"
+            :voteAverage = "movie.vote_average"
+            :overview = "movie.overview"
+            />
+        </div>
     </div>
 </template>
 
@@ -35,4 +37,10 @@ export default {
         flex-wrap: wrap;
         justify-content: space-between;
     }
+
+    .background-wrapper{
+        overflow: auto;
+    }
+
+
 </style>
