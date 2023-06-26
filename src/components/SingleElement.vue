@@ -31,7 +31,7 @@
                     
                 </div>
                 <div>
-                    <i v-for="star in Math.ceil(voteAverage / 2)" class="fa-solid fa-star"></i>
+                    <i v-for="star in Math.ceil(voteAverage / 2)" class="yellow fa-solid fa-star"></i>
                     <i v-for="star in ( 5 - (Math.ceil(voteAverage / 2)))" class="fa-regular fa-star"></i>
                 </div>
             </div>
@@ -122,5 +122,9 @@ export default {
     .flag{
         height: 30px;
         margin: 15px 0 15px;
+    }
+
+    .yellow{
+        color: yellow;
     }
 </style>
